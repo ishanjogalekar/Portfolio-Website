@@ -23,13 +23,18 @@ export async function handler(event) {
     const result = await response.json();
 
     if (result.ok) {
-        window.location.href = "/thanks.html";
-      } else {
-        alert("Something went wrong. Please try again.");
-        console.error(result);
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Error submitting form. Please try again later.");
+      window.location.href = "/thanks.html";
     }
+    else {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: "Something went wrong", details: result }),
+      };
+    }
+  } catch (err) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Something went wrong", details: err.message }),
+    };
   }
+}
