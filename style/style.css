@@ -1,0 +1,430 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff9966;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        width: 200px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Hero */
+header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ff9966;
+}
+
+.typing-container {
+    margin-top: 1.2rem;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.typing-text {
+    display: inline-block;
+    border-right: 2px solid #ff9966;
+    padding-left: 6px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.highlight-name {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 8px #ff9966;
+    }
+
+    to {
+        text-shadow: 0 0 18px #ff5e62;
+    }
+}
+
+section {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+    
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #ff9966;
+}
+#summary{
+    font-size: 17px;
+    text-align: left;
+    line-height: 55px;
+}
+
+
+
+/* Resume */
+.resume-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resume-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.resume-btn i {
+    margin-right: 8px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.082);
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.1);
+}
+
+#skills .cards .card p{
+   font-size: 20px; 
+}
+
+#skills .cards .card p:hover{
+   font-weight: bolder;
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  margin: 2rem auto;
+  padding: 0;
+  width: 90%;
+}
+
+/* Center vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #ff9966;
+  transform: translateX(-50%);
+}
+
+/* Timeline items */
+.timeline-item {
+  position: relative;
+  width: 45%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin: 2rem 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Show animation */
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Circle dots */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 100%;
+  width: 18px;
+  height: 18px;
+  background: #ff9966;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Left items */
+.timeline-item.left {
+  left: 1.5%;
+  width: 45%; 
+  text-align: left;
+}
+
+
+.timeline-item.left::before {
+  left: 100%; /* dot on center line */
+}
+
+/* Right items */
+.timeline-item.right {
+  left: 50%;       /* Start from center line */
+  width: 45%;      /* Same width as left */
+  text-align: right;
+}
+
+
+.timeline-item.right::before {
+  left: 0;  /* dot on center line */
+  transform: translateX(-50%);
+}
+
+/* Mobile responsive timeline */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px; /* line moves to left */
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    margin-left: 40px;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    left: 20px; /* dot stays on the line */
+    transform: translateX(0);
+  }
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 550px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form .form-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-form .form-group:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.contact-form .form-group i {
+  margin-right: 10px;
+  color: #ff9966;
+  font-size: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 70px;
+}
+
+/* Button */
+.contact-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 2rem;
+
+}
+
+.social-links i {
+  font-style: normal; /* stops fallback underscore glyphs */
+}
+
+.social-links a {
+  margin: 0 15px;
+  text-decoration: none;   /* removes the underline */
+  display: inline-block;   /* keeps spacing consistent */
+  font-size: 2rem;
+  color: #fff; /* default white */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0077b5; /* LinkedIn blue for LinkedIn */
+  text-decoration: none;   /* removes the underline */
+  transform: scale(1.2);
+}
+
+.social-links a:nth-child(2):hover {
+  color: #333; /* GitHub dark */
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 2rem;
+}
