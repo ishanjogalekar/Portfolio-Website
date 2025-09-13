@@ -4,7 +4,15 @@ export async function handler(event) {
   }
 
   try {
-    const body = JSON.parse(event.body);
+    let body;
+
+    // If content-type is JSON, parse JSON
+    if (event.headers["content-type"]?.includes("application/json")) {
+      body = JSON.parse(event.body);
+    } else {
+      // Otherwise parse form-urlencoded
+      body = Object.fromEntries(new URLSearchParams(event.body));
+    }
 
     const response = await fetch(`https://formspree.io/f/${process.env.FORMSPREE_ID}`, {
       method: "POST",
