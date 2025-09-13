@@ -22,19 +22,20 @@ export async function handler(event) {
 
     const result = await response.json();
 
-    if (result.ok) {
-      window.location.href = "/thanks.html";
-    }
-    else {
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ error: "Something went wrong", details: result }),
-      };
-    }
-  } catch (err) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        ok: response.ok,
+        next: "/thanks.html"
+      }),
+    };
+  } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Something went wrong", details: err.message }),
+      body: JSON.stringify({
+        error: "Something went wrong",
+        details: error.message,
+      }),
     };
   }
 }
