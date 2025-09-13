@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio: Thank You</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <style>
+    .thankyou-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .thankyou-icon {
+      font-size: 80px;
+      color: #ff9966;
+      margin-bottom: 20px;
+      animation: pop 0.8s ease forwards;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .thankyou-title {
+      font-size: 40px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      animation: glow 2s infinite alternate;
+    }
+
+    .thankyou-message {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      color: #ddd;
+    }
+
+    .home-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      color: #fff;
+      padding: 12px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .home-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-container">
+    <div class="thankyou-icon">✅</div>
+    <h1 class="thankyou-title">Thank You!</h1>
+    <p class="thankyou-message">
+      Your message has been successfully sent.  
+      I’ll get back to you as soon as possible.
+    </p>
+    <a href="/" class="home-btn">Back to Home</a>
+  </div>
+</body>
+</html>
