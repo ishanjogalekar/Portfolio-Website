@@ -42,20 +42,50 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".fade-section, .card, .timeline-item")
   .forEach(el => observer.observe(el));
 
-//Email validations
+// Email + Form submission
 const form = document.getElementById("contactForm");
 const emailInput = document.getElementById("email");
 const emailError = document.getElementById("emailError");
 
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", async function (e) {
+  e.preventDefault(); // stop default HTML form submit
+
+  // ✅ Email validation
   const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
   if (!emailPattern.test(emailInput.value)) {
-    e.preventDefault();
     emailError.style.display = "block";
     emailInput.style.border = "1px solid #ff5e62";
+    return;
   } else {
     emailError.style.display = "none";
     emailInput.style.border = "none";
+  }
+
+  // ✅ Collect form data
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
+
+  try {
+    const response = await fetch("/.netlify/functions/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (result.ok) {
+      window.location.href = result.next || "/thanks.html"; // redirect to thanks.html
+    } else {
+      alert("Something went wrong. Please try again.");
+      console.error(result);
+    }
+  } catch (error) {
+    console.error("Form submit error:", error);
+    alert("Error submitting form. Please try again later.");
   }
 });
 
