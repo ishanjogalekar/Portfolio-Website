@@ -1,235 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ishan Jogalekar - Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="./style/style.css">
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-</head>
+  <title>Ishan Jogalekar — Software Developer</title>
 
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Google Fonts: Syne (headings) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">My Portfolio</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#summary">Whoami</a></li>
-      <li><a href="#resume">Deployment History</a></li>
-      <li><a href="#skills">Tool Box</a></li>
-      <li><a href="#projects">Focus Zones</a></li>
-      <li><a href="#certifications">Skill Tokens</a></li>
-      <li><a href="#experience">Runtime Experience</a></li>
-      <li><a href="#education">Learning Curve</a></li>
-      <li><a href="#gallery">Ping Me</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+
+  <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">IJ<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certs">Certs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="./static/Ishan Jogalekar - Software developer.pdf" download>
+        <i class="fa-solid fa-download"></i> Resume
+      </a>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- Hero -->
-  <header>
-    <img src="./images/profile.jpeg" alt="Profile Photo">
-    <div class="typing-container">
-      I am <span class="typing-text" id="typing"></span>
-    </div>
-    <h1 class="highlight-name">Ishan Jogalekar</h1>
-  </header>
-
-  <!-- Summary -->
-  <section id="summary" class="fade-section">
-    <h2>Whoami</h2>
-    <p style="font-size: 17.8px;">
-      🚀 Passionate backend developer with hands-on experience in building scalable web apps using Java, Spring Boot, and Python. <br>
-      ⚡ Skilled in designing reliable architectures and writing clean, efficient code. <br>
-      🔐 Enthusiast about cybersecurity, with a strong focus on secure coding and threat mitigation. <br>
-      💡 Always exploring innovative solutions to optimize performance and strengthen application security. <br>
-      🌐 Driven to craft tech that’s not just functional, but future-ready.
-    </p>
-  </section>
-
-  <!-- Resume -->
-  <section id="resume" class="fade-section">
-    <h2>Deployment History</h2>
-    <p style="text-align:center; font-style:italic; margin-bottom:1rem; font-size: 1.5rem;">
-      Interested in my journey? Take a look at my detailed experience.
-    </p>
-    <div style="text-align:center;">
-      <a href="./static/Ishan Jogalekar - Software Engineer.pdf" target="_blank" class="resume-btn">
-        <i class="fa-solid fa-file-pdf"></i> View My Resume
-      </a>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="fade-section">
-    <h2>Tool Box</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="./images/icons/java_icon.svg" alt="Java Logo" class="icon">
-        <p>Java</p>
-      </div>
-      <div class="card">
-        <img src="./images/icons/spring-boot_icon.svg" alt="Spring Logo" class="icon">
-        <p>Spring-Boot</p>
-      </div>
-      <div class="card">
-        <img src="./images/icons/python_icon.svg" alt="Python Logo" class="icon">
-        <p>Python</p>
-      </div>
-      <div class="card">
-        <img src="./images/icons/linux_icon.png" alt="Linux Logo" class="icon">
-        <p>UNIX & Shell Scripting</p>
-      </div>
-      <div class="card">
-        <img src="./images/icons/aws_icon.svg" alt="Aws Logo" class="icon">
-        <p>AWS</p>
-      </div>
-      <div class="card">
-        <img src="./images/icons/docker_icon.svg" alt="Docker Logo" class="icon">
-        <p>Docker / Containerization</p>
-      </div>
-      <div class="card">
-        <img src="./images/icons/dbms_icon.png" alt="DBMS Logo" class="icon">
-        <p>Database Management Systems</p>
-      </div>
-      <div class="card">
-        <img src="./images/icons/clouddev_icon.png" alt="Cloud Logo" class="icon">
-        <p>Cloud Development</p>
-      </div>
-      <div class="card">
-        <img src="./images/icons/cybersec_icon.png" alt="CyberSec Logo" class="icon">
-        <p>Cyber Security</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="fade-section">
-    <h2>Focus Zones - My Area of Work</h2>
-    <div class="cards">
-      <div class="card">
-        <p><i class="fa-solid fa-server fa-2x"></i></p>
-        <h3 style="font-size: 20px">Backend Development</h3>
-        <ul style="text-align: left;font-size: 17.5px;">
-          <li>Specialized in building robust, scalable, and secure backend services</li>
-          <li>Skilled in multiple tech stacks including Java, Python, and cloud technologies</li>
-          <li>Proficient with backend frameworks: Spring Boot, Hibernate, Quarkus, Django, and more</li>
-          <li>Strong focus on high performance, reliability, and security in enterprise-grade solutions</li>
-          <li>Skilled in database design, application optimization, and integration with relational and non-relational
-            databases.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <p><i class="fa-solid fa-gears fa-2x"></i></p>
-        <h3>Modernization Of Projects</h3>
-        <ul style="text-align: left;font-size: 17.5px;">
-          <li>Experienced in modernizing legacy projects and designing scalable architectures</li>
-          <li>Skilled in developing cloud-native architectures, microservices, and following agile development practices
-          </li>
-          <li>Hands-on experience with major cloud platforms: AWS, Azure, and GCP, including successful migration of
-            projects to cloud-native environments</li>
-          <li>Proven ability to build secure, scalable, reliable, and high-performance microservices using modern
-            software development approaches</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications -->
-  <section id="certifications" class="fade-section">
-    <h2>Skill Tokens</h2>
-    <ul style="text-align: left;font-size: 19px;">
-      <li>Spring - Ecosystem and Core Developer Certification</li>
-      <li>GCP - Building Scalable Java Microservices with Spring Boot and Spring Cloud</li>
-      <li>DeepLearning.AI - Generative AI with Large Language Models</li>
-      <li>NYU - Introduction to Cyber Attacks Certificate</li>
+  <!-- mobile nav drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#about" class="mn-link">About</a></li>
+      <li><a href="#skills" class="mn-link">Skills</a></li>
+      <li><a href="#experience" class="mn-link">Experience</a></li>
+      <li><a href="#education" class="mn-link">Education</a></li>
+      <li><a href="#projects" class="mn-link">Projects</a></li>
+      <li><a href="#certs" class="mn-link">Certs</a></li>
+      <li><a href="#contact" class="mn-link">Contact</a></li>
     </ul>
+  </div>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-content reveal-hero">
+      <div class="hero-text">
+        <p class="hero-eyebrow"><span class="blink-cursor"></span> Backend Engineer</p>
+        <h1>Ishan<br><span class="accent">Jogalekar</span></h1>
+        <p class="hero-tagline">Building scalable, cloud-ready systems with <br> Java · Spring Boot · Python · AWS</p>
+        <div class="hero-btns">
+          <a href="#experience" class="btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn-ghost">Let's Connect</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/ishan-jogalekar" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/ishanjogalekar" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://topmate.io/ishan_jogalekar_10" target="_blank" title="Topmate"><i class="fa-solid fa-calendar-check"></i></a>
+          <a href="mailto:jogalekarishan@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring"></div>
+        <div class="hero-photo-placeholder">
+          <!-- <i class="fa-solid fa-user"></i>
+          <span>Add your photo here</span> -->
+          <img src="./images/Profile.jpeg" alt="Ishan Jogalekar" class="hero-photo">
+        </div>
+        <!-- Replace above div with: <img src="your-photo.jpg" alt="Ishan Jogalekar" class="hero-photo"> -->
+        <div class="hero-badge top-badge"><i class="fa-brands fa-java"></i> Java</div>
+        <div class="hero-badge right-badge"><i class="fa-brands fa-aws"></i> AWS</div>
+        <div class="hero-badge bottom-badge"><i class="fa-solid fa-cloud"></i> Cloud</div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="plain-section fade-section">
-    <h2>Runtime Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item left">
-        <h3 style="font-size: 21px;">Interactive Brokers - IBKR (IBSS)</h3>
-        <p style="font-style: italic;font-size: 19px;color: #fdbd34;">Aug 2025 - Current</p>
-        <p style="font-style: italic;font-size: 19px;color: rgb(127, 146, 255);">Software Developer</p>
-        <p style="font-size: 18px;">Working on backend development with Spring Boot, Java, and Oracle DB;
-          building secure reference data systems and automating tasks with Shell, Python & Perl scripts on Unix</p>
-      </div>
-      <div class="timeline-item right">
-        <h3 style="font-size: 21px;">ICICI Lombard GIC LTD.</h3>
-        <p style="font-style: italic;font-size: 19px;color: #fdbd34;">Feb 2023 - Aug 2025</p>
-        <p style="font-style: italic;font-size: 19px;color: rgb(127, 146, 255);">Associate Software Developer</p>
-        <p style="font-size: 18px;">Modernized core applications with Spring-Boot and DevSecOps, building real-time communication and dynamic reporting systems. 
-          Migrated legacy apps to AWS cloud-native technologies, optimizing resources and monitoring to cut operational costs by over 80%.</p>
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label reveal"><i class="fa-solid fa-circle-info"></i> About</div>
+      <h2 class="section-title reveal">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>Backend Software Engineer</strong> based in Mumbai, India, with deep expertise in <strong>Java, Spring Boot, and cloud-native architectures</strong>. I build systems that scale — from real-time communication platforms processing millions of events, to cost-optimised cloud migrations that save thousands annually.
+          </p>
+          <p>
+            Currently working at <strong>ICICI Lombard</strong> on AI-driven customer engagement platforms, and pursuing a <strong>Master's in AI & ML from BITS Pilani</strong>. I thrive in Agile teams where reliability, performance, and clean code are non-negotiable.
+          </p>
+          <div class="about-stats">
+            <div class="stat reveal-left">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat reveal-left" style="--d:.1s">
+              <span class="stat-num">70%</span>
+              <span class="stat-label">Cost Reduction Achieved</span>
+            </div>
+            <!-- <div class="stat reveal-left" style="--d:.2s">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Companies</span>
+            </div> -->
+          </div>
+        </div>
+        <div class="about-focus reveal-right">
+          <h3>Focus Zones</h3>
+          <div class="focus-tags">
+            <span><i class="fa-solid fa-gears"></i> Microservices Architecture</span>
+            <span><i class="fa-brands fa-aws"></i> AWS Cloud Engineering</span>
+            <span><i class="fa-solid fa-bolt"></i> High-Performance APIs</span>
+            <span><i class="fa-solid fa-database"></i> Distributed Systems</span>
+            <span><i class="fa-solid fa-shield-halved"></i> DevSecOps</span>
+            <span><i class="fa-solid fa-brain"></i> AI & ML Integration</span>
+            <span><i class="fa-solid fa-tower-broadcast"></i> Event-Driven Systems</span>
+            <span><i class="fa-solid fa-chart-line"></i> Observability & Monitoring</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
-  <section id="education" class="plain-section fade-section">
-    <h2>Learning Curve</h2>
-    <div class="timeline">
-      <div class="timeline-item left">
-        <h3>B.Tech - Computer Science</h3>
-        <p style="font-style: italic;font-size: 22px;color: #fdbd34;">2019-2023</p>
-        <p style="font-style: italic;font-size: 22px;color: rgb(127, 146, 255);">Vellore Institute Of Technology,Vellore (VIT)</p>
-      </div>
-      <div class="timeline-item right">
-        <h3>High Secondary Certificate</h3>
-        <p style="font-style: italic;font-size: 22px;color: #fdbd34;">2017-2019</p>
-        <p style="font-style: italic;font-size: 22px;color: rgb(127, 146, 255);">SBC Higher Secondary College (HSC Board)</p>
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <div class="section-label reveal"><i class="fa-solid fa-code"></i> Technical Stack</div>
+      <h2 class="section-title reveal">Skills & Technologies</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal" style="--d:0s">
+          <div class="skill-card-icon"><i class="fa-solid fa-terminal"></i></div>
+          <h4>Languages</h4>
+          <div class="skill-pills">
+            <span>Java</span><span>Python</span><span>TypeScript</span>
+            <span>JavaScript</span><span>SQL</span><span>Perl</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--d:.08s">
+          <div class="skill-card-icon"><i class="fa-brands fa-aws"></i></div>
+          <h4>Cloud & DevOps</h4>
+          <div class="skill-pills">
+            <span>AWS ECS/EKS</span><span>S3</span><span>EC2</span>
+            <span>SQS</span><span>Lambda</span><span>API Gateway</span><span>Jenkins</span>
+            <span>Docker</span><span>Kubernetes</span><span>GCP</span><span>Azure</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--d:.16s">
+          <div class="skill-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h4>Frameworks</h4>
+          <div class="skill-pills">
+            <span>Spring Boot</span><span>Spring MVC</span><span>Quarkus</span>
+            <span>Django</span><span>Flask</span><span>Angular</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--d:.24s">
+          <div class="skill-card-icon"><i class="fa-solid fa-database"></i></div>
+          <h4>Data Systems</h4>
+          <div class="skill-pills">
+            <span>Oracle DB</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
+            <span>Cassandra</span><span>DynamoDB</span><span>Aurora</span>
+            <span>Apache Kafka</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--d:.32s">
+          <div class="skill-card-icon"><i class="fa-solid fa-vials"></i></div>
+          <h4>Testing & Observability</h4>
+          <div class="skill-pills">
+            <span>JUnit</span><span>TestNG</span><span>Selenium</span>
+            <span>Dynatrace</span><span>Grafana</span><span>Prometheus</span> 
+            <span>Open-Telemetry</span><span>Zipkin</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--d:.4s">
+          <div class="skill-card-icon"><i class="fa-solid fa-server"></i></div>
+          <h4>App Servers & Tools</h4>
+          <div class="skill-pills">
+            <span>Apache Tomcat</span><span>WebSphere</span><span>WebLogic</span>
+            <span>Git</span><span>Unix</span><span>Jasper Reports</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section id="gallery" class="fade-section">
-    <h2>Ping Me</h2>
-    <p style="text-align:center; margin-bottom:1.5rem; font-style:italic; color:#ccc; font-size: 1.5rem;">
-      Let’s connect! Drop me a quick message 💬
-    </p>
-    <div class="contact-form">
-      <form id="contactForm" action="/.netlify/functions/contact" method="POST" novalidate>
-        <div class="form-group">
-          <i class="fa-solid fa-user"></i>
-          <input type="text" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <i class="fa-solid fa-envelope"></i>
-          <input type="email" name="email" id="email" placeholder="Your Email" required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-        </div>
-        <small id="emailError" style="color:#ff5e62; display:none;">⚠ Please enter a valid email address</small>
+  <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-label reveal"><i class="fa-solid fa-briefcase"></i> Career</div>
+      <h2 class="section-title reveal">Work Experience</h2>
 
-        <div class="form-group">
-          <i class="fa-solid fa-comment-dots"></i>
-          <textarea name="message" maxlength="50" placeholder="Your Message (max 50 chars)" required></textarea>
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-circle-dot"></i></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3>Software Developer</h3>
+                <p class="tl-company"><i class="fa-solid fa-building"></i> ICICI Lombard GIC Ltd.</p>
+              </div>
+              <span class="tl-date"><i class="fa-regular fa-calendar"></i> Jan 2026 – Present</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Enhanced a customer communication management platform supporting insurance policy booking and post-purchase engagement.</li>
+              <li>Designed and implemented AI-driven model generation and analytics using historical communication data to improve customer interaction insights.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>AI/ML</span><span>Spring Boot</span><span>Kafka</span><span>AWS</span>
+            </div>
+          </div>
         </div>
-        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
-      </form>
-      <!-- Social Links -->
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/ishan-jogalekar-1708421a5/" target="_blank" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin-in"></i>
+
+        <div class="tl-item reveal" style="--d:.1s">
+          <div class="tl-dot"><i class="fa-solid fa-circle-dot"></i></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3>Junior Software Developer</h3>
+                <p class="tl-company"><i class="fa-solid fa-building"></i> Interactive Brokers (IBSS)</p>
+              </div>
+              <span class="tl-date"><i class="fa-regular fa-calendar"></i> Aug 2025 – Dec 2025</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Built a reliable and scalable backend reference database system for financial assets and contracts, enabling automated workflows.</li>
+              <li>Designed backend APIs and workflow automation using Java, Spring Boot, Python, and Oracle DB on Unix-based systems.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Java</span><span>Spring Boot</span><span>Oracle DB - PLSQL</span><span>Python</span><span>Perl</span><span>Unix</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" style="--d:.2s">
+          <div class="tl-dot"><i class="fa-solid fa-circle-dot"></i></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3>Associate Software Developer</h3>
+                <p class="tl-company"><i class="fa-solid fa-building"></i> ICICI Lombard GIC Ltd.</p>
+              </div>
+              <span class="tl-date"><i class="fa-regular fa-calendar"></i> Aug 2023 – Aug 2025</span>
+            </div>
+            <ul class="tl-bullets">
+              <li><strong>Reduced reporting service costs by 70%</strong> by modernising legacy systems with Spring MVC, Spring Boot, and DevSecOps integration with Jasper-based report generation.</li>
+              <li>Improved availability and deployment speed by migrating core apps to <strong>AWS (ECS, EKS, EC2, RDS, S3)</strong> and implementing Dynatrace, Grafana, and Prometheus for observability.</li>
+              <li>Achieved significant annual cloud cost savings by eliminating unused resources, enforcing S3 lifecycle policies, and migrating workloads to ECS.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>AWS ECS/EKS</span><span>Spring MVC</span><span>DevSecOps</span><span>Grafana</span><span>Prometheus</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
+  <section id="education" class="section section-dark">
+    <div class="container">
+      <div class="section-label reveal"><i class="fa-solid fa-graduation-cap"></i> Education</div>
+      <h2 class="section-title reveal">Academic Background</h2>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="edu-body">
+            <span class="edu-badge">Ongoing</span>
+            <h3>Master of Technology</h3>
+            <p class="edu-spec">Artificial Intelligence &amp; Machine Learning</p>
+            <p class="edu-inst"><i class="fa-solid fa-landmark"></i> Birla Institute of Technology and Science, Pilani</p>
+            <p class="edu-date"><i class="fa-regular fa-calendar"></i> Jan 2026 – Apr 2028</p>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" style="--d:.12s">
+          <div class="edu-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="edu-body">
+            <span class="edu-badge completed">Completed</span>
+            <h3>Bachelor of Technology</h3>
+            <p class="edu-spec">Computer Science &amp; Engineering</p>
+            <p class="edu-inst"><i class="fa-solid fa-landmark"></i> Vellore Institute of Technology</p>
+            <p class="edu-date"><i class="fa-regular fa-calendar"></i> Jul 2019 – Apr 2023</p>
+            <p class="edu-gpa"><i class="fa-solid fa-star"></i> GPA: 3.4 / 4.0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-label reveal"><i class="fa-solid fa-rocket"></i> Projects</div>
+      <h2 class="section-title reveal">What I've Built</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><i class="fa-brands fa-confluence"></i></div>
+            <!-- <div class="project-links">
+              <a href="#" title="View Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div> -->
+          </div>
+          <h3>Streams-Based Customer Communication Platform</h3>
+          <p>Apache Kafka Streams-based real-time customer communication application handling event-driven workflows for insurance processes.</p>
+          <div class="project-tags">
+            <span>Apache Kafka</span><span>Java</span><span>Spring Boot</span><span>Event-Driven</span>
+          </div>
+          <span class="project-date"><i class="fa-regular fa-calendar"></i> Feb 2026</span>
+        </div>
+
+        <div class="project-card reveal" style="--d:.1s">
+          <div class="project-top">
+            <div class="project-icon"><i class="fa-solid fa-fingerprint"></i></div>
+            <div class="project-links">
+              <a href="https://www.igi-global.com/chapter/e-voting/328262" title="View Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3>E-Voting System</h3>
+          <p>Biometric-based cryptographic algorithm implementation for secure, tamper-proof voting machines ensuring electoral integrity.</p>
+          <div class="project-tags">
+            <span>Cryptography</span><span>Biometrics</span><span>Security</span><span>Java</span>
+          </div>
+          <span class="project-date"><i class="fa-regular fa-calendar"></i> Aug – Nov 2022</span>
+        </div>
+
+        <div class="project-card reveal" style="--d:.2s">
+          <div class="project-top">
+            <div class="project-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/ishanjogalekar/AgriHero-IoT-Platform" title="View Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3>Farm2Home</h3>
+          <p>IoT platform connecting farmers directly to consumers, enabling real-time agricultural data monitoring and smart supply chain management.</p>
+          <div class="project-tags">
+            <span>IoT</span><span>Python</span><span>Cloud</span><span>Agriculture</span>
+          </div>
+          <span class="project-date"><i class="fa-regular fa-calendar"></i> Feb – Aug 2021</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CERTS ═══════════════════════════ -->
+  <section id="certs" class="section section-dark">
+    <div class="container">
+      <div class="section-label reveal"><i class="fa-solid fa-certificate"></i> Certifications</div>
+      <h2 class="section-title reveal">Credentials</h2>
+
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fa-solid fa-cubes"></i></div>
+          <div class="cert-body">
+            <h4>Build Scalable Microservices using Spring Boot</h4>
+            <p>Professional certification on building production-grade microservice architectures.</p>
+          </div>
+          <div class="cert-badge"><i class="fa-solid fa-check-circle"></i></div>
+        </div>
+
+        <div class="cert-card reveal" style="--d:.08s">
+          <div class="cert-icon"><i class="fa-solid fa-robot"></i></div>
+          <div class="cert-body">
+            <h4>Generative AI with LLMs</h4>
+            <p>DeepLearning.AI — Foundations of large language models and generative AI applications.</p>
+          </div>
+          <div class="cert-badge"><i class="fa-solid fa-check-circle"></i></div>
+        </div>
+
+        <div class="cert-card reveal" style="--d:.16s">
+          <div class="cert-icon"><i class="fa-solid fa-leaf"></i></div>
+          <div class="cert-body">
+            <h4>Spring Ecosystem and Core</h4>
+            <p>LearnQuest — In-depth coverage of the Spring Framework ecosystem and core concepts.</p>
+          </div>
+          <div class="cert-badge"><i class="fa-solid fa-check-circle"></i></div>
+        </div>
+
+        <div class="cert-card reveal" style="--d:.24s">
+          <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="cert-body">
+            <h4>Software Security</h4>
+            <p>University of Maryland — Secure software design, threat modeling, and vulnerability prevention.</p>
+          </div>
+          <div class="cert-badge"><i class="fa-solid fa-check-circle"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-label reveal"><i class="fa-solid fa-satellite-dish"></i> Contact</div>
+      <h2 class="section-title reveal">Let's Connect</h2>
+      <p class="contact-sub reveal">Open to backend engineering roles, collaborations, and interesting conversations.</p>
+
+      <div class="contact-grid">
+
+        <a class="contact-card reveal" href="mailto:jogalekarishan@gmail.com">
+          <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="cc-text">
+            <span class="cc-label">Email</span>
+            <span class="cc-val">jogalekarishan@gmail.com</span>
+          </div>
+          <i class="fa-solid fa-arrow-right cc-arrow"></i>
         </a>
-        <a href="https://github.com/ishanjogalekar" target="_blank" aria-label="GitHub">
-          <i class="fa-brands fa-github"></i>
+
+        <a class="contact-card reveal" style="--d:.08s" href="https://www.linkedin.com/in/ishan-jogalekar" target="_blank">
+          <div class="cc-icon li"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="cc-text">
+            <span class="cc-label">LinkedIn</span>
+            <span class="cc-val">Ishan Jogalekar</span>
+          </div>
+          <i class="fa-solid fa-arrow-right cc-arrow"></i>
+        </a>
+
+        <a class="contact-card reveal" style="--d:.16s" href="https://github.com/ishanjogalekar" target="_blank">
+          <div class="cc-icon gh"><i class="fa-brands fa-github"></i></div>
+          <div class="cc-text">
+            <span class="cc-label">GitHub</span>
+            <span class="cc-val">ishan-jogalekar</span>
+          </div>
+          <i class="fa-solid fa-arrow-right cc-arrow"></i>
+        </a>
+
+        <a class="contact-card reveal" style="--d:.24s" href="https://topmate.io/ishan_jogalekar_10" target="_blank">
+          <div class="cc-icon tm"><i class="fa-solid fa-calendar-check"></i></div>
+          <div class="cc-text">
+            <span class="cc-label">Topmate</span>
+            <span class="cc-val">Book a session with me</span>
+          </div>
+          <i class="fa-solid fa-arrow-right cc-arrow"></i>
+        </a>
+
+      </div>
+
+      <div class="resume-cta reveal">
+        <a href="./static/Ishan Jogalekar - Software developer.pdf" download class="btn-primary btn-large">
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
         </a>
       </div>
     </div>
-
-
   </section>
 
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
   <footer>
-    <p>&copy; 2025 Ishan Jogalekar. All Rights Reserved.</p>
+    <div class="footer-inner">
+      <span class="nav-logo">IJ<span class="dot">.</span></span>
+      <p>© <span id="currentYear"></span> Ishan Jogalekar. Built with passion &amp; precision.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/ishan-jogalekar" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/ishanjogalekar" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://topmate.io/ishan_jogalekar_10" target="_blank"><i class="fa-solid fa-calendar-check"></i></a>
+        <a href="mailto:jogalekarishan@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="./script/script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
